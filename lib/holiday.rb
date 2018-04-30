@@ -66,7 +66,6 @@ def all_supplies_in_holidays(holiday_hash)
   date_hash.each do |holiday, supplies|
     if holiday.to_s.include?("_")
       holiday.to_s.split("_").each {|word| word.capitalize!}
-      holiday.join(" ")
       
       puts "  #{holiday}: #{supplies.join(", ")}"
     else
